@@ -13,6 +13,7 @@
   <div class="container">
     <div class="content-box">
       <div class="content-film">
+        @if(film) {
         <div class="content-film__img">
           <img src="images/film.png" alt="film">
         </div>
@@ -47,6 +48,8 @@
             <button>Смотреть</button>
           </div>
         </div>
+        }
+
         <app-sidebar></app-sidebar>
       </div>
     </div>

@@ -1,10 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, LOCALE_ID, OnInit } from '@angular/core';
+import { Film } from '../../models/film.model';
+import { FILMS } from '../../constants/films.constants';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-film-page',
   templateUrl: './film-page.component.html',
   styleUrl: './film-page.component.css',
 })
-export class FilmPageComponent {
-  //public films: Film[] = FILMS;
+export class FilmPageComponent implements OnInit {
+  public films: Film[] = FILMS;
+  public film!: Film;
+
+  constructor(private _route: ActivatedRoute) {}
+  ngOnInit(): void {
+    const id = this._route.snapshot.paramMap.get('id');
+
+    this._initFilm(Number(id));
+  }
+  private _initFilm(id: number) {
+    const findFilm = this.films.find((film) => film.id === id);
+
+    if (findFilm) {
+      this.film = findFilm;
+    }
+  }
 }
