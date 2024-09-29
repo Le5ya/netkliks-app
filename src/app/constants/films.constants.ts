@@ -11,7 +11,7 @@ export const FILMS: Film[] = [
     image: './images/film.png',
   },
   {
-    id: 0,
+    id: 1,
     title: 'Марсианин 2',
     original: 'The Martian 2015',
     category: 'Фантастика, приключения',
@@ -20,7 +20,7 @@ export const FILMS: Film[] = [
     image: './images/film.png',
   },
   {
-    id: 0,
+    id: 2,
     title: 'Марсианин 3',
     original: 'The Martian 2015',
     category: 'Фантастика, приключения',
