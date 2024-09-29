@@ -7,6 +7,4 @@ import { FILMS } from './constants/films.constants';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  public films: Film[] = FILMS;
-}
+export class AppComponent {}

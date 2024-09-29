@@ -1,24 +1,11 @@
 <!DOCTYPE html>
 <app-header></app-header>
 
-<app-search></app-search>
+
 <main>
+  <app-search></app-search>
 
-  <section class="content">
-    <div class="container">
-      <div class="content-box">
-        <div class="content-main">
-          <h2 class="content-main__title">Результаты поиска</h2>
-          <div class="content-cards">
-            @for (film of films; track film.id) {
-            <app-card>[film]="film"</app-card>
-            }
+  <router-outlet></router-outlet>
 
-          </div>
-        </div>
-        <app-sidebar></app-sidebar>
-      </div>
-    </div>
 
-  </section>
 </main>
