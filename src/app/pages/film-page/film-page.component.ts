@@ -1,7 +1,7 @@
 import { Component, LOCALE_ID, OnInit } from '@angular/core';
 import { Film } from '../../models/film.model';
 import { FILMS } from '../../constants/films.constants';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-film-page',
@@ -12,7 +12,7 @@ export class FilmPageComponent implements OnInit {
   public films: Film[] = FILMS;
   public film!: Film;
 
-  constructor(private _route: ActivatedRoute) {}
+  constructor(private _route: ActivatedRoute, private _router: Router) {}
   ngOnInit(): void {
     const id = this._route.snapshot.paramMap.get('id');
 
@@ -23,6 +23,8 @@ export class FilmPageComponent implements OnInit {
 
     if (findFilm) {
       this.film = findFilm;
+    } else {
+      this._router.navigate(['/']);
     }
   }
 }

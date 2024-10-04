@@ -9,9 +9,10 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SearchComponent } from './components/search/search.component';
 import { CatalogPageComponent } from './pages/catalog-page/catalog-page.component';
 import { FilmPageComponent } from './pages/film-page/film-page.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, CardComponent, HeaderComponent, SidebarComponent, SearchComponent, CatalogPageComponent, FilmPageComponent],
+  declarations: [AppComponent, CardComponent, HeaderComponent, SidebarComponent, SearchComponent, CatalogPageComponent, FilmPageComponent, NotFoundComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
